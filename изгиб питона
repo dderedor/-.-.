@@ -1,5 +1,5 @@
 import pygame
-import random
+import random  # Убедитесь, что только необходимые импорты включены
 
 # Константы
 SCREEN_WIDTH = 640
@@ -23,7 +23,8 @@ class GameObject:
 
     def draw(self, surface):
         """Отрисовывает объект на игровом поле."""
-        pygame.draw.rect(surface, self.body_color, (self.position[0], self.position[1], CELL_SIZE, CELL_SIZE))
+        pygame.draw.rect(surface, self.body_color, 
+                         (self.position[0], self.position[1], CELL_SIZE, CELL_SIZE))
 
 class Apple(GameObject):
     """Класс, описывающий яблоко."""
